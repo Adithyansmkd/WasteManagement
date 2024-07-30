@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.signup-main-page{
+    background-image: url(images/page3-bckkk.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.sub{
+    width: 55%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    height: 100vh;
+}
+.signup-main-page .sub h1{
+    color: #fff;
+    font-size: 3.8em;
+    margin: 15px 30px;
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+.sub h1 span{
+    color: #38e54d;
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sub-form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    height: 100vh;
+    width: 45%;
+}
+.sub-form form{
+    background-color: #232121b9;
+    padding: 70px 75px;
+    box-shadow: 10px 10px 23px 5px rgba(80, 79, 79, 0.542);
+color: #fff;
+    border-radius: 20px 0px 20px 0px;
+}
+form h1{
+    margin-top: -50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form label{
+    margin-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form input{
+    padding: 5px 15px;margin: 5px 0px;
+    background-color: #EEE2DE;
+    border-radius: 7px;
+}
+form #btn{
+    margin: 20px;
+    background-color: #38e54d;
+    border: none;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+form #btn:hover{
+    background-color: #2a7232;
+}
+h1 {
+    font-size: 2rem;
+    margin-left: 30px;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 span {
+    color: #38e54d;
+}
+@media (max-width:500px){
+    .signup-main-page{
+        display: block;
+        height: 180vh;
+    }
+    h1{
+        font-size: 1.6rem;
+    }
+    .sub h1{
+        font-size: 2.8rem;
+     
+    }
+    .sub{
+        height: 70vh;
+    }
+    .sub h1 span{
+        font-size: 3.3rem;
+    }
+}

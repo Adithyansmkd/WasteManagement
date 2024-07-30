@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #191919;
+}
+h1{
+    margin: 15px 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    font-size: 2.4rem;
+
+}
+h1 span{
+    color: #38e54d;
+}
+.wave{
+    position: relative;
+
+    text-align: center;
+    align-items: center;
+    margin-top: 8%;
+}
+.wave span{
+    color:#fff;
+    position: relative;
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s *var(--i));
+}
+@keyframes waviy{
+    0%,
+    40%,
+    100%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translateY(-20px);
+    }
+}
+.additional{
+    height: 10vh;
+    width: 100%;
+    margin-top: 2%;
+
+}
+a{
+    text-decoration: none;
+}
+.additional p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff7a;
+    font-family: 'Courier New', Courier, monospace;
+}
+.additional p span{
+    color: #38e54d;
+    line-height: 70px;
+    font-size: 1.6rem;
+    animation: hide-anim ease-in-out 50s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes hide-anim{
+    0%{
+        transform: scale(1);
+    }
+    8%{
+        color: #191919;
+    }
+    100%{
+        transform: scale(0);
+        color: #191919;
+    }
+}
+.comming{
+   margin-top: 8%;
+    text-align: center;
+
+
+}
+.comming span a h1:hover{
+    color: #38e54d;
+}
+.comming i{
+    font-size: 2rem;
+    animation: anim-i infinite 2s ease-in;
+    position: relative;
+}
+@keyframes anim-i {
+    0%{
+        left: 0px;
+    }
+    100%{
+       left: 30px;
+    }
+}
+.comming span h1{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    animation: 3s ease-in anim-comming; 
+}
+@keyframes anim-comming{
+    0%{transform: scale(0.5);
+    color: #191919;}
+    75%{
+        color: #191919;
+    }
+    100%{
+        transform: scale(1);
+        color: #fff;
+    }
+}
+@media (max-width:500px){
+    .wave{
+        margin-top: 28%;
+    }
+    .wave span{
+        font-size: 2.9rem;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #191919;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    font-size: 2.1rem;
+    margin: 15px 30px;
+}
+h1 span{
+    color: #38e54d;
+}
+.submission-tick {
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.submission-tick span i{
+    font-size: 6.8rem;
+    color:  #38e54d;
+    animation: 1s ease-in anim-comming; 
+}
+@keyframes anim-comming{
+    0%{transform: scale(0.5);
+    color: #191919;}
+    75%{
+        color: #191919;
+    }
+    100%{
+        transform: scale(1);
+     
+        
+    }
+}
+.message{
+    margin-top: 5%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    color: #fff;
+    animation: anim-message ease-in 2s ;
+
+}
+@keyframes anim-message{
+    0%{
+        transform: scale(0.0);
+        color: #191919;
+    }
+    80%{
+        color: #191919;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.go-bck{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+}
+.go-bck a{
+    text-decoration: none;
+}
+
+.go-bck span i{
+    margin-top: 1%;
+    font-size: 2.8rem;
+    color: red;
+    animation: 4s ease-in anim-bck;
+}
+.go-bck span i:hover{
+    color: #38e54d;
+}
+@keyframes anim-bck{
+    0%{
+        transform:scale(0.5);
+        color: #191919;
+    }
+    40%{color: #191919;}
+
+    100%{transform: scale(1);}
+}
+@media (max-width:500px){
+    h1{
+        font-size: 1.8rem;
+    }
+    .submission-tick{
+        margin-top:20%;
+    }
+    .message{
+        font-size: 1.2rem;
+        margin-top: 13%;
+    }
+    .go-bck span i{
+        font-size: 2.1rem;
+    }
+}

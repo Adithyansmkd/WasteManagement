@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e8f4fd;
+}
+h1{
+    margin: 15px 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 2rem;
+
+}
+h1 span{
+    color: #38e54d;
+}
+.payment{
+    width: 100%;
+    display: flex;
+    height: 80vh;
+}
+.pay-qr{
+    width: 40%;
+    height: 80vh;
+
+}
+.pay-qr .qr-code{
+  
+    height: 80vh;
+
+    text-align: center;
+}
+.qr-code h1{
+   
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.qr-code img{
+    width: 30vh;
+    margin-top: 5%;
+    height: 30vh;
+    animation: qr-anim ease-out 1.4s;
+}
+.pay-qr button{
+    padding:6px 25px ;
+
+    border-radius: 4px;
+    margin-top: 5%;
+    
+    position: relative;
+    isolation: isolate;
+}
+.pay-qr button::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: #38e54d;
+    inset: 0;
+    scale: 0 1;
+    transition: scale 400ms;
+}
+.pay-qr button:hover::after,button:focus-visible::after{
+    scale: 1 1;
+}
+
+.pay-qr button a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+@keyframes qr-anim{
+    0%{
+        transform: scale(0.2);
+    }
+}
+.qr-code span{
+    font-size: 3rem;
+    color: black;
+ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.qr-code p{
+    margin-top: 10%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.qr-code input{
+    padding: 6px 25px;
+    border-radius: 8px;
+    margin-top: 2%;
+    border: 2px solid #38e54d;
+}
+.card{
+   
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.card form{
+ border:3px solid black;
+ border-radius: 0px 15px 15px 0px;
+margin-top: -10%;
+ padding: 60px 30px;
+ box-shadow: 5px 8px 15px 5px rgba(0, 0, 0, 0.685);
+ text-align: center;
+}
+form input{
+    padding: 7px 25px;
+    border: 0.1px solid rgb(62, 61, 61);
+    border-radius: 4px;
+    background-color: rgb(242, 241, 239);
+}
+form button{
+    padding: 7px 28px;
+    background-color: #38e54d;
+    border: none;
+    border-radius: 6px;
+}
+form h1{
+   font-family: 'Courier New', Courier, monospace;
+}
+form label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+form button a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+@media (max-width:500px){
+  .card{
+    display: block;
+    width: 100%;
+  }
+  .pay-qr{
+    display: block;
+    width: 100%;
+  }
+  .payment{
+    display: block;
+  }
+  .card form{
+    padding: 20px 20px;
+  }
+  h1{
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="reqest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+ 
+
+ 
+    <h1><i class="fa-solid fa-dumpster"></i> Waste <br>Management <br><span>Hub</span>
+    </h1>
+   
+
+
+<form id="submit-form">
+<h1>Fill the Form</h1>
+<input type="text"  placeholder="Enter name"  id="name" name="name" required> <br>
+<input type="text" placeholder="Phone Number"  id="ph" name="phone" required><br>
+<input type="text" placeholder="Address" name="address" required><br>
+<input type="email" name="email" id="" placeholder="E-mail" required><br>
+<select name="type" id="type" required>
+    <option value="">Select</option>
+    <option value="plastic">Plastic Waste</option>
+    <option value="medical">Medical Waste</option>
+    <option value="food">Food Waste</option>
+    <option  value="metalic">Metalic Waste</option>
+    <option value="electronic">Electronic Waste</option>
+</select><br>
+<input type="submit" id="submit"  >
+
+
+
+</form>
+
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxvV2pDnif0bC6AkFXKqDrLMYLeSm9JCTvAR5vvvwcNJyUlSaeYUn_E4cDaiijAMIml/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+              
+                window.location.reload()
+            window.location.href="payment.html"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+</body>
+</html>
